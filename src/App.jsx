@@ -31,7 +31,7 @@ const App = () => {
       <SearchBox
         inputValue={searchValue}
         handleChange={handleSearchChange}
-        className="searchBox"
+       
       />
       <ContactList contacts={filteredContacts} />
     </div>

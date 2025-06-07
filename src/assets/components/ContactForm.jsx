@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import * as Yup from "yup";
 import { useSelector, useDispatch } from "react-redux";
 import { addContact } from "../redux/contactsSlice";
-
+import "../components/ContactForm.modules.css";
 const validationSchema = Yup.object({
   name: Yup.string()
     .min(3, "Too Short!")
@@ -60,14 +60,14 @@ const ContactForm = () => {
     >
       {({ setFieldValue }) => (
         <Form>
-          <div>
-            <label htmlFor="name">Name</label>
+          <div className="form-group">
+            <label htmlFor="name">Name :</label>
             <Field type="text" name="name" id="name" />
             <ErrorMessage name="name" component="span" />
           </div>
 
-          <div>
-            <label htmlFor="number">Number</label>
+          <div className="form-group">
+            <label htmlFor="number">Number :</label>
             <Field
               type="text"
               name="number"
@@ -77,7 +77,7 @@ const ContactForm = () => {
             <ErrorMessage name="number" component="span" />
           </div>
 
-          <button type="submit">Add Contact</button>
+          <button className="btn" type="submit">Add Contact</button>
         </Form>
       )}
     </Formik>

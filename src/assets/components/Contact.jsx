@@ -1,14 +1,26 @@
 import PropTypes from "prop-types";
+import "../components/ContactList.modules.css";
 
 export default function ContactListItem({ id, name, number, onDelete }) {
   return (
-    <li key={id}>
+    <li className="contact-item" key={id}>
       <div>
         <p>{name}</p>
         <p>{number}</p>
       </div>
 
-      <button type="button" onClick={() => onDelete(id)}>
+      <button
+        style={{
+          backgroundColor: "red",
+          color: "white",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer",
+          padding: "5px 10px",
+        }}
+        type="button"
+        onClick={() => onDelete(id)}
+      >
         Delete
       </button>
     </li>

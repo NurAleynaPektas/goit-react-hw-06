@@ -1,7 +1,7 @@
 import Contact from "./Contact.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteContact } from "../redux/contactsSlice.js";
-
+import "../components/ContactList.modules.css";
 const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts.items);
@@ -16,7 +16,7 @@ const ContactList = () => {
   };
 
   return (
-    <ul>
+    <ul className="contact-list">
       {filteredContacts.map((contact) => (
         <Contact
           key={contact.id}
