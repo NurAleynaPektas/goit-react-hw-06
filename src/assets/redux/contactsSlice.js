@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [
-    { id: "id-1", name: "Nur Pektaş", number: "000-71-38" },
-    { id: "id-2", name: "Abdullah Pektaş", number: "000-61-34" },
-    { id: "id-3", name: "Fatma Pektaş", number: "000-61-38" },
+    { id: "id-1", name: "Nur Pektaş", number: "501 094 81 38" },
+    { id: "id-2", name: "Abdullah Pektaş", number: "535 818 93 73" },
+    { id: "id-3", name: "Fatma Pektaş", number: "500 017 61 38" },
   ],
   searchValue: "",
 };
